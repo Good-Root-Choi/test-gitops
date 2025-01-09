@@ -1,8 +1,8 @@
 ﻿apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: my-git-repo
-  namespace: flux-system
+  name: test-configmap
+  namespace: choi-test
 spec:
   url: https://github.com/Good-Root-Choi/test-gitops.git
   branch: main
