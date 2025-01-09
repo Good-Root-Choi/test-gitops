@@ -10,4 +10,4 @@ data:
       - key: "maxConnections"
         value: "100"
       - key: "enableFeatureX"
-        value: "true"
+        value: "false"
