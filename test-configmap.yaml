@@ -1,7 +1,7 @@
 ﻿apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: test-configmap
+  name: test-gitops
   namespace: choi-test
 spec:
   url: https://github.com/Good-Root-Choi/test-gitops.git
