@@ -1,4 +1,6 @@
-﻿apiVersion: source.toolkit.fluxcd.io/v1beta1
+# test-configmap.yaml 파일 내에 GitRepository와 Kustomization 리소스를 정의
+
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: test-gitops
@@ -6,4 +8,17 @@ metadata:
 spec:
   url: https://github.com/Good-Root-Choi/test-gitops.git
   branch: main
+  interval: 1m
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: test-configmap
+  namespace: choi-test
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: test-gitops
+  path: ./
   interval: 1m
